@@ -1,0 +1,51 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f0f0;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.4s;
+  position: relative;
+}
+
+.card.flipped, .card.matched {
+  background-color: #fff;
+  color: #4CAF50;
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  background-color: #ddd;
+  cursor: default;
+}
+
+#restart {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
