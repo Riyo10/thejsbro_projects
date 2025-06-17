@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="card input-card">
+      <h1>Age Calculator</h1>
+      <p>Enter your birthdate to view age and detailed stats.</p>
+      <input type="date" id="dob" />
+      <button onclick="calculateAge()">Calculate</button>
+    </div>
+
+    <div class="card" id="result">
+      <h2>Summary</h2>
+      <p id="ageText">Awaiting input...</p>
+      <p id="nextBirthday"></p>
+    </div>
+
+    <div class="charts">
+      <div class="card">
+        <h3>Age Breakdown</h3>
+        <canvas id="doughnutChart"></canvas>
+      </div>
+      <div class="card">
+        <h3>Detailed Stats</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
